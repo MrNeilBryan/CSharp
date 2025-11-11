@@ -1,12 +1,12 @@
 using Microsoft.Azure.Cosmos;
 
-record Item(string id, string pk, string name, string type);
+record Item(string id, string category);
 
 class Program
 {
     // TODO: Insert your Cosmos DB details here:
-    private const string EndpointUri = "x";
-    private const string Key = "x";
+    private const string EndpointUri = "X";
+    private const string Key = "X";
 
     // TODO: Set your names here (or leave these defaults)
     private const string DatabaseId = "shop";
@@ -55,7 +55,7 @@ class Program
 
         Console.WriteLine("Stopping...");
         await processor.StopAsync();
-        Console.WriteLine("Stopped.");
+        Console.WriteLine("Stopped......");
     }
 
     private static async Task HandleChangesAsync(
